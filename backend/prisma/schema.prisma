@@ -1,3 +1,9 @@
+// 
+
+
+
+
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -8,7 +14,6 @@ datasource db {
 }
 
 model User {
-  
   id          Int           @id @default(autoincrement())
   name        String
   email       String        @unique
@@ -53,6 +58,9 @@ model Transaction {
   paymentRetries       PaymentRetry[]     // Relation to PaymentRetry
   createdAt            DateTime           @default(now())
   updatedAt            DateTime           @updatedAt
+  
+  // **Added Relation to User Model**
+  user                 User?              @relation(fields: [senderUserId], references: [id])
 
   @@index([senderUserId])    // Optimize lookups for transactions by sender user
   @@index([receiverUserId])  // Optimize lookups for transactions by receiver user
