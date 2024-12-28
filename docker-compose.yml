@@ -1,0 +1,142 @@
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    environment:
+      POSTGRES_USER: e9
+      POSTGRES_PASSWORD: ethernos9
+      POSTGRES_DB: payApp
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "yourusername"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: e9
+      RABBITMQ_DEFAULT_PASS: ethernos9
+    ports:
+      - "5672:5672" # RabbitMQ message broker
+      - "15672:15672" # RabbitMQ management UI
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
+
+
+
+
+
+
+
+
+
+
+
+
+
+# version: '3.9'
+
+# services:
+#   postgres:
+#     image: postgres:15
+#     container_name: postgres
+#     environment:
+#       POSTGRES_USER: e9
+#       POSTGRES_PASSWORD: ethernos9
+#       POSTGRES_DB: payApp
+#     ports:
+#       - "5432:5432"
+#     volumes:
+#       - postgres_data:/var/lib/postgresql/data
+#     healthcheck:
+#       test: ["CMD", "pg_isready", "-U", "yourusername"]
+#       interval: 10s
+#       timeout: 5s
+#       retries: 5
+
+#   rabbitmq:
+#     image: rabbitmq:3-management
+#     container_name: rabbitmq
+#     environment:
+#       RABBITMQ_DEFAULT_USER: e9
+#       RABBITMQ_DEFAULT_PASS: ethernos9
+#     ports:
+#       - "5672:5672" # RabbitMQ message broker
+#       - "15672:15672" # RabbitMQ management UI
+#     healthcheck:
+#       test: ["CMD", "rabbitmq-diagnostics", "ping"]
+#       interval: 10s
+#       timeout: 5s
+#       retries: 5
+
+#   backend:
+#     build:
+#       context: ./backend
+#       dockerfile: Dockerfile
+#     container_name: main-server
+#     environment:
+#       DATABASE_URL: postgres://e9:ethernos9@postgres:5432/payApp
+#       QUEUE_HOST: rabbitmq
+#       QUEUE_URL: amqp://e9:ethernos9@rabbitmq:5672/
+#     depends_on:
+#       - postgres
+#       - rabbitmq
+#     ports:
+#       - "3000:3000" # Main server API
+#     healthcheck:
+#       test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+#       interval: 10s
+#       timeout: 5s
+#       retries: 5
+
+#   worker:
+#     build:
+#       context: ./worker
+#       dockerfile: Dockerfile
+#     container_name: worker
+#     environment:
+#       DATABASE_URL: postgres://e9:ethernos9@postgres:5432/payApp
+#       QUEUE_HOST: rabbitmq
+#       QUEUE_URL: amqp://e9:ethernos9@rabbitmq:5672/
+#     depends_on:
+#       - postgres
+#       - rabbitmq
+#     healthcheck:
+#       test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+#       interval: 10s
+#       timeout: 5s
+#       retries: 5
+
+# volumes:
+#   postgres_data:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

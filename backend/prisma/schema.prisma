@@ -1,0 +1,77 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  
+  id          Int           @id @default(autoincrement())
+  name        String
+  email       String        @unique
+  phoneNumber String        @unique
+  password    String
+  createdAt   DateTime      @default(now())
+  accounts    Account[]     // Relation to Account
+  transactions Transaction[] // Relation to Transaction
+
+  @@index([email]) // Ensure faster lookups by email
+  @@index([phoneNumber]) // Ensure faster lookups by phone number
+}
+
+model Account {
+  accountNumber String     @id // Use as primary key
+  userId        Int
+  user          User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  accountType   String     // Type of account (e.g., Savings, Wallet)
+  balance       Decimal    @default(0.00) // Account-specific balance
+  isDeleted     Boolean    @default(false) // Soft delete flag
+  isDefault     Boolean    @default(false) // Indicates if this is the default account for the user
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+  senderTransactions Transaction[] @relation("SenderAccountRelation") // Transactions where this account is the sender
+  receiverTransactions Transaction[] @relation("ReceiverAccountRelation") // Transactions where this account is the receiver
+
+  @@index([userId]) // Optimize lookups by user
+}
+
+model Transaction {
+  id                   Int                @id @default(autoincrement())
+  senderUserId         Int
+  receiverUserId       Int?
+  senderAccountNumber  String
+  receiverAccountNumber String
+  senderAccount        Account            @relation("SenderAccountRelation", fields: [senderAccountNumber], references: [accountNumber], onDelete: Cascade)
+  receiverAccount      Account?           @relation("ReceiverAccountRelation", fields: [receiverAccountNumber], references: [accountNumber], onDelete: Cascade)
+  amount               Decimal            @default(0.0) // Payment amount
+  status               TransactionStatus  @default(PENDING) // Current transaction status
+  description          String?            // Additional details about the transaction
+  isDeleted            Boolean            @default(false) // Soft delete flag
+  paymentRetries       PaymentRetry[]     // Relation to PaymentRetry
+  createdAt            DateTime           @default(now())
+  updatedAt            DateTime           @updatedAt
+
+  @@index([senderUserId])    // Optimize lookups for transactions by sender user
+  @@index([receiverUserId])  // Optimize lookups for transactions by receiver user
+  @@index([senderAccountNumber]) // Optimize lookups by sender's account
+  @@index([receiverAccountNumber]) // Optimize lookups by receiver's account
+  @@index([status])    // Optimize queries for filtering by transaction status
+}
+
+model PaymentRetry {
+  id            Int        @id @default(autoincrement())
+  transactionId Int
+  transaction   Transaction @relation(fields: [transactionId], references: [id], onDelete: Cascade)
+  attemptTime   DateTime   @default(now()) // Timestamp of retry attempt
+  reason        String?    // Reason for retry (e.g., "Gateway Timeout")
+}
+
+enum TransactionStatus {
+  PENDING
+  SUCCESS
+  FAILED
+  RETRYING
+}
