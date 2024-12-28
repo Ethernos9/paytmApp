@@ -1,8 +1,5 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -27,40 +24,45 @@ model User {
 }
 
 model Account {
-  id            Int           @id @default(autoincrement())
+  accountNumber String     @id // Use as primary key
   userId        Int
-  accountNumber String        @unique
-  user          User          @relation(fields: [userId], references: [id], onDelete: Cascade)
-  accountType   String        // Type of account (e.g., Savings, Wallet)
-  balance       Decimal       @default(0.00) // Account-specific balance
-  isDeleted     Boolean       @default(false) // Soft delete flag
-  createdAt     DateTime      @default(now())
-  transactions  Transaction[] // Relation to Transaction
+  user          User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  accountType   String     // Type of account (e.g., Savings, Wallet)
+  balance       Decimal    @default(0.00) // Account-specific balance
+  isDeleted     Boolean    @default(false) // Soft delete flag
+  isDefault     Boolean    @default(false) // Indicates if this is the default account for the user
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+  senderTransactions Transaction[] @relation("SenderAccountRelation") // Transactions where this account is the sender
+  receiverTransactions Transaction[] @relation("ReceiverAccountRelation") // Transactions where this account is the receiver
 
   @@index([userId]) // Optimize lookups by user
 }
 
 model Transaction {
-  id             Int                @id @default(autoincrement())
-  userId         Int
-  accountNumber  String
-  user           User               @relation(fields: [userId], references: [id], onDelete: Cascade)
-  account        Account            @relation(fields: [accountNumber], references: [accountNumber], onDelete: Cascade)
-  senderNumber   String             // Sender's phone number
-  receiverNumber String             // Receiver's phone number
-  amount         Decimal            @default(0.0) // Payment amount
-  status         TransactionStatus  @default(PENDING) // Current transaction status
-  description    String?            // Additional details about the transaction
-  isDeleted      Boolean            @default(false) // Soft delete flag
-  paymentRetries PaymentRetry[]     // Relation to PaymentRetry
-  createdAt      DateTime           @default(now())
-  updatedAt      DateTime           @updatedAt
+  id                   Int                @id @default(autoincrement())
+  senderUserId         Int
+  receiverUserId       Int?
+  senderAccountNumber  String
+  receiverAccountNumber String
+  senderAccount        Account            @relation("SenderAccountRelation", fields: [senderAccountNumber], references: [accountNumber], onDelete: Cascade)
+  receiverAccount      Account?           @relation("ReceiverAccountRelation", fields: [receiverAccountNumber], references: [accountNumber], onDelete: Cascade)
+  amount               Decimal            @default(0.0) // Payment amount
+  status               TransactionStatus  @default(PENDING) // Current transaction status
+  description          String?            // Additional details about the transaction
+  isDeleted            Boolean            @default(false) // Soft delete flag
+  paymentRetries       PaymentRetry[]     // Relation to PaymentRetry
+  createdAt            DateTime           @default(now())
+  updatedAt            DateTime           @updatedAt
+  
+  // **Added Relation to User Model**
+  user                 User?              @relation(fields: [senderUserId], references: [id])
 
-  @@index([userId])    // Optimize lookups for transactions by user
-  @@index([accountNumber]) // Optimize lookups by account
+  @@index([senderUserId])    // Optimize lookups for transactions by sender user
+  @@index([receiverUserId])  // Optimize lookups for transactions by receiver user
+  @@index([senderAccountNumber]) // Optimize lookups by sender's account
+  @@index([receiverAccountNumber]) // Optimize lookups by receiver's account
   @@index([status])    // Optimize queries for filtering by transaction status
-  @@index([senderNumber])  // Optimize searches by sender's number
-  @@index([receiverNumber])  // Optimize searches by receiver's number
 }
 
 model PaymentRetry {
@@ -77,4 +79,3 @@ enum TransactionStatus {
   FAILED
   RETRYING
 }
-
