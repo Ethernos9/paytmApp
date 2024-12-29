@@ -54,7 +54,7 @@ userRoutes.post('/user/signup',async(req,res)=>{
         process.env.JWT_SECRET, // Secret key (should be stored in .env file)
         { expiresIn: "1h" } // Token expiration
       );
-      
+
     // Store token in cookies 
     
     res
@@ -126,7 +126,7 @@ userRoutes.post("/user/login", async (req, res) => {
     }
   });
   
-  userRoutes.post("/user/logout", (req, res) => {
+userRoutes.post("/user/logout", (req, res) => {
     try {
       // Clear the authToken cookie
       res

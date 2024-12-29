@@ -2,7 +2,10 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import userRoutes from "../routes/userRoutes.js";
+import userRoutes from "./userRoutes.js";
+import accountRoutes from "./accountRoutes.js";
+import transferRoutes from "./transferRoutes.js";
+
 
 dotenv.config({
   path: process.env.NODE_ENV === "production" ? ".env.production" : ".env.development",
@@ -15,7 +18,9 @@ app.use(cookieParser());
 app.use(cors());
 
 // Base route
-app.use("/api/v1", userRoutes);
+app.use("/api/v1",userRoutes );
+app.use("/api/v2",accountRoutes);
+app.use("/api/v3",transferRoutes);
 
 const PORT = process.env.PORT ;
 
