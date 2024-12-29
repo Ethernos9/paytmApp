@@ -41,7 +41,7 @@ model Account {
 
 model Transaction {
   id                   Int                @id @default(autoincrement())
-  senderUserId         Int
+  senderUserId         Int                
   receiverUserId       Int?
   senderAccountNumber  String
   receiverAccountNumber String
