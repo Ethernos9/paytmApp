@@ -4,7 +4,8 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import userRoutes from "./userRoutes.js";
 import accountRoutes from "./accountRoutes.js";
-import transferRoutes from "./transferRoutes.js";
+import transferRoutes, { connectQueue } from "./transferRoutes.js";
+import { connect } from "amqplib";
 
 
 dotenv.config({
@@ -16,6 +17,9 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
+
+// RabbitMQ connection
+connectQueue()
 
 // Base route
 app.use("/api/v1",userRoutes );
@@ -485,34 +489,34 @@ app.listen(PORT, () => {
 
 
 
-// // Payment initiation endpoint
-// // app.post("/api/transfer/phoneNumber", async (req, res) => {
-// //   const { userId, senderNumber, receiverNumber, amount,accountNumber } = req.body;
-// //   try {
-// //     // Create a new transaction
-// //     const transaction = await prisma.transaction.create({
-// //       data: {
-// //         userId,
-// //         senderNumber,
-// //         receiverNumber,
-// //         amount,
-// //         accountNumber,
+// Payment initiation endpoint
+// app.post("/api/transfer/phoneNumber", async (req, res) => {
+//   const { userId, senderNumber, receiverNumber, amount,accountNumber } = req.body;
+//   try {
+//     // Create a new transaction
+//     const transaction = await prisma.transaction.create({
+//       data: {
+//         userId,
+//         senderNumber,
+//         receiverNumber,
+//         amount,
+//         accountNumber,
    
-// //       },
-// //     });
-// //     console.log("transaction : ",transaction)
+//       },
+//     });
+//     console.log("transaction : ",transaction)
 
-// //     // Push transaction to queue
-// //     channel.sendToQueue(QUEUE_NAME, Buffer.from(JSON.stringify(transaction)), {
-// //       persistent: true,
-// //     });
+//     // Push transaction to queue
+//     channel.sendToQueue(QUEUE_NAME, Buffer.from(JSON.stringify(transaction)), {
+//       persistent: true,
+//     });
 
-// //     res.status(200).json({ message: "Payment initiated", transaction });
-// //   } catch (error) {
-// //     console.error("Error initiating payment:", error);
-// //     res.status(500).json({ error: "Failed to initiate payment" });
-// //   }
-// // });
+//     res.status(200).json({ message: "Payment initiated", transaction });
+//   } catch (error) {
+//     console.error("Error initiating payment:", error);
+//     res.status(500).json({ error: "Failed to initiate payment" });
+//   }
+// });
 
 
 
