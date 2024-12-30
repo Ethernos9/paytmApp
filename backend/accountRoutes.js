@@ -113,4 +113,22 @@ accountRoutes.get("/account/defaultAccount", authenticateToken,async(req,res)=>{
 
 })
 
+accountRoutes.post("/account/balance",authenticateToken,async(req,res)=>{
+  const {accountNumber} = req.body;
+  try {
+    const account = await prisma.account.findFirst({
+        where:{
+            accountNumber: accountNumber
+        },
+        select:{
+            accountNumber:true,
+            balance:true
+        }
+        
+    })
+    res.status(200).json({sucess:true,message:"Account balance fetched successfully",account})
+  } catch (error) {
+    res.status(500).json({sucess:false,message:" Unable to fetch Acount balance",account})
+  }
+})
 export default accountRoutes

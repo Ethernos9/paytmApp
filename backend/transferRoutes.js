@@ -8,6 +8,12 @@ transferRoutes.post("/", async (req, res) => {
 
 })
 
+transferRoutes.get("/:id",async(req,res)=>{
+   // get status of a transaction by id 
+})
+
+
+
 export default transferRoutes
 
 
