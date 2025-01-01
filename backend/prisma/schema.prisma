@@ -35,6 +35,7 @@ model Account {
   receiverTransactions Transaction[] @relation("ReceiverAccountRelation") // Transactions where this account is the receiver
 
   @@index([userId]) // Optimize lookups by user
+
 }
 
 model Transaction {

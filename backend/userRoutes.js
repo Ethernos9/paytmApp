@@ -6,6 +6,7 @@ import bcrypt from "bcryptjs"
 
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
+import { authenticateToken } from "./middleware.js";
 const envFile = process.env.NODE_ENV === "production" ? ".env.production" : ".env.development";
 dotenv.config({ path: envFile });
 
@@ -145,6 +146,27 @@ userRoutes.post("/user/logout", (req, res) => {
       res.status(500).json({ success: false, message: "Failed to logout user" });
     }
   });
+
+
+userRoutes.get("/get/user",authenticateToken, async(req,res)=>{
+  const id = req.userId;
+  console.log("userId from get/user:  --->", id)
+try {
+  const user = await prisma.user.findUnique({
+    where: { id: id},
+    select: {
+      id: true,
+      name: true,
+      email: true,
+      phoneNumber:true
+    },
+  })
+  if (!user) return res.status(404).json({ success: false, message: "User not found" });
+  return res.status(200).json({sucess:true, message :"user found", user})
+} catch (error) {
+  return res.status(500).json({ success: false, message: "Something went wrong" });
+}
+})
   
 
 export default userRoutes;

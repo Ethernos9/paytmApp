@@ -137,3 +137,357 @@
 {"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-01T06:32:39.348Z"}
 {"amount":349,"description":"recharge","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2610366574","receiverUserId":4,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-01T06:32:39.349Z"}
 {"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T06:37:46.314Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T06:38:07.468Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-01T06:38:35.623Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-01T06:38:35.659Z"}
+{"amount":200,"description":"lunch","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2610366574","receiverUserId":4,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-01T06:38:35.662Z"}
+{"amount":"349","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T06:38:35.717Z","transactionId":16}
+{"amount":"200","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T06:38:35.724Z","transactionId":17}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-01T06:38:38.368Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-01T06:38:38.377Z"}
+{"amount":200,"description":"lunch","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2610366574","receiverUserId":4,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-01T06:38:38.378Z"}
+{"amount":"200","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T06:38:38.424Z","transactionId":18}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-01T06:38:41.034Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-01T06:38:41.043Z"}
+{"amount":200,"description":"lunch","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2610366574","receiverUserId":4,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-01T06:38:41.044Z"}
+{"amount":"200","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T06:38:41.094Z","transactionId":19}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-01T06:38:42.684Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-01T06:38:42.692Z"}
+{"amount":200,"description":"lunch","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2610366574","receiverUserId":4,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-01T06:38:42.694Z"}
+{"amount":"200","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T06:38:42.745Z","transactionId":20}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-01T06:38:44.046Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-01T06:38:44.056Z"}
+{"amount":200,"description":"lunch","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2610366574","receiverUserId":4,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-01T06:38:44.056Z"}
+{"amount":"200","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T06:38:44.105Z","transactionId":21}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-01T06:38:45.401Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-01T06:38:45.409Z"}
+{"amount":200,"description":"lunch","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2610366574","receiverUserId":4,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-01T06:38:45.410Z"}
+{"amount":"200","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T06:38:45.460Z","transactionId":22}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-01T06:38:47.087Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-01T06:38:47.097Z"}
+{"amount":200,"description":"lunch","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2610366574","receiverUserId":4,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-01T06:38:47.099Z"}
+{"amount":"200","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T06:38:47.146Z","transactionId":23}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-01T06:38:49.259Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-01T06:38:49.268Z"}
+{"amount":200,"description":"lunch","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2610366574","receiverUserId":4,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-01T06:38:49.269Z"}
+{"amount":"200","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T06:38:49.317Z","transactionId":24}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-01T06:38:50.312Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-01T06:38:50.320Z"}
+{"amount":200,"description":"lunch","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2610366574","receiverUserId":4,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-01T06:38:50.321Z"}
+{"amount":"200","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T06:38:50.367Z","transactionId":25}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-01T06:38:51.404Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-01T06:38:51.414Z"}
+{"amount":200,"description":"lunch","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2610366574","receiverUserId":4,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-01T06:38:51.415Z"}
+{"amount":"200","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T06:38:51.460Z","transactionId":26}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-01T06:38:52.433Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-01T06:38:52.441Z"}
+{"amount":200,"description":"lunch","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2610366574","receiverUserId":4,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-01T06:38:52.443Z"}
+{"amount":"200","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T06:38:52.494Z","transactionId":27}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-01T06:38:53.396Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-01T06:38:53.403Z"}
+{"amount":200,"description":"lunch","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2610366574","receiverUserId":4,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-01T06:38:53.404Z"}
+{"amount":"200","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T06:38:53.453Z","transactionId":28}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-01T06:38:54.452Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-01T06:38:54.460Z"}
+{"amount":200,"description":"lunch","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2610366574","receiverUserId":4,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-01T06:38:54.461Z"}
+{"amount":"200","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T06:38:54.511Z","transactionId":29}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-01T06:38:55.470Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-01T06:38:55.478Z"}
+{"amount":200,"description":"lunch","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2610366574","receiverUserId":4,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-01T06:38:55.479Z"}
+{"amount":"200","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T06:38:55.527Z","transactionId":30}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-01T08:28:28.035Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-01T08:28:28.092Z"}
+{"amount":200,"description":"lunch","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2610366574","receiverUserId":4,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-01T08:28:28.094Z"}
+{"amount":"200","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T08:28:28.223Z","transactionId":31}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:30:27.247Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:30:45.786Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:30:50.560Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:30:53.086Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:31:01.823Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:31:03.325Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:31:08.911Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:31:22.825Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:31:24.843Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:31:59.215Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:32:03.043Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:32:06.229Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:32:08.770Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:32:16.432Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:32:34.606Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:32:46.976Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:32:50.635Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:33:05.816Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:33:13.324Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:33:16.394Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:34:42.770Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:34:51.066Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:35:01.670Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:35:03.593Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:35:08.257Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:35:14.811Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:35:23.007Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:35:31.681Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:35:35.404Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:35:38.768Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:35:44.615Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:35:48.287Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:35:54.591Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:35:56.592Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:36:03.178Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:36:08.169Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:36:13.193Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:36:18.439Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:36:34.218Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:36:37.532Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:36:49.411Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:36:56.080Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:37:03.168Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:37:08.874Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:37:10.748Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:37:23.320Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:37:32.555Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:38:00.163Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:38:23.791Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:38:25.325Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:38:30.145Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:39:30.334Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:39:31.521Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:39:33.834Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:39:40.583Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:39:42.260Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:40:16.482Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:41:09.651Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:41:11.999Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:41:15.638Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:41:22.210Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:41:33.678Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:41:36.679Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:41:39.449Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:43:49.338Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:44:05.567Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:44:09.567Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:45:05.748Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:45:43.490Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:45:49.331Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:47:10.674Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:47:15.376Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:47:35.893Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:47:44.075Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:47:46.178Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:48:33.830Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:48:39.015Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:48:40.760Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:48:51.422Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:48:55.739Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:49:07.773Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:49:18.621Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:49:38.506Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:49:42.266Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:50:03.177Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:50:26.754Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:50:29.015Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:51:18.290Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:51:21.377Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:51:33.352Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:51:38.007Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:51:42.720Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:51:49.942Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:51:51.409Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:51:52.845Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:52:14.193Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:52:16.933Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:52:22.573Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:52:23.785Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:52:27.344Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:52:56.613Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:53:01.697Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:53:03.895Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:53:08.877Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:53:10.030Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:53:16.494Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:53:17.986Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:53:21.095Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:53:23.844Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:53:28.135Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:54:19.591Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:54:28.117Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:54:54.836Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:54:59.613Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:55:01.513Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:55:06.320Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:55:14.645Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:55:20.597Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:55:25.193Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:55:34.924Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:55:41.170Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:55:54.732Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:55:58.998Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:56:08.206Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:56:12.131Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:56:26.475Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:59:18.179Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:59:26.005Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:59:31.237Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T08:59:33.559Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:01:59.337Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:02:06.088Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:02:13.081Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:02:16.047Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:02:17.725Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:02:23.814Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:02:27.796Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:02:31.702Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:02:38.454Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:02:52.022Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:02:54.140Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:03:08.880Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:03:11.246Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:03:13.917Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:03:19.188Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:03:20.708Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:03:24.528Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:03:34.116Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:03:37.431Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:03:47.278Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:03:56.914Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:04:13.909Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:04:31.167Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:04:34.357Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:04:36.233Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:04:37.428Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:04:39.847Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:04:44.156Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:04:47.692Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:04:49.177Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:07:20.614Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:07:25.878Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:07:28.387Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:07:32.687Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:07:34.611Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:07:42.479Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:07:54.657Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:08:00.158Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:08:02.404Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:08:19.213Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:08:31.044Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:09:05.481Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:09:15.489Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:09:19.667Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:09:24.073Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:09:25.775Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:09:29.287Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:09:32.468Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:09:33.922Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:09:37.461Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:09:39.270Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:09:46.736Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:09:50.191Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:09:51.611Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:09:55.785Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:10:03.228Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:10:06.825Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:10:13.532Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:10:16.870Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:10:27.657Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:11:31.215Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:11:44.953Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:11:48.377Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:12:49.734Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-01T09:18:47.531Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-01T09:18:47.581Z"}
+{"amount":200,"description":"spotify premium","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2610366574","receiverUserId":4,"senderAccountNumber":"4878563449","senderUserId":5,"timestamp":"2025-01-01T09:18:47.585Z"}
+{"amount":"200","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T09:18:47.686Z","transactionId":32}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-01T09:19:12.469Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-01T09:19:12.484Z"}
+{"amount":200,"description":"spotify premium","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"6591699264","receiverUserId":3,"senderAccountNumber":"4878563449","senderUserId":5,"timestamp":"2025-01-01T09:19:12.486Z"}
+{"amount":"200","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T09:19:12.535Z","transactionId":33}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:21:10.364Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:24:17.833Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:24:25.936Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:24:34.914Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:24:37.135Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:24:50.187Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:25:04.340Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:25:10.332Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:25:17.862Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:25:42.684Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:25:45.782Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:26:06.764Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:26:13.813Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:26:19.268Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:27:27.553Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:27:32.340Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:27:37.397Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:27:47.877Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:28:09.724Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T09:30:35.075Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:18:22.904Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:18:26.834Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:18:28.553Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:18:29.869Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:18:34.243Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:21:27.523Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:21:29.375Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:21:33.990Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:21:35.416Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:21:36.970Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:22:10.199Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:22:27.878Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:22:30.020Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:22:37.721Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:22:39.175Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:22:44.074Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:22:47.204Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:22:53.222Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:22:58.458Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:23:01.432Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:23:05.425Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:23:06.651Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:23:20.416Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:23:37.300Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:23:40.962Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:23:44.860Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:23:51.303Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:23:56.588Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:23:58.199Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:24:01.549Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:24:05.867Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:24:11.373Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:24:12.950Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:24:14.083Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:24:19.491Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:24:20.506Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:24:34.743Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:24:48.695Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:24:59.840Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:25:02.247Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:25:12.469Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:25:19.488Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:25:21.903Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:25:24.274Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:26:50.048Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:29:56.089Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:30:07.840Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:30:24.624Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:31:50.702Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:32:18.160Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:32:48.221Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:32:50.518Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:32:54.300Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:32:56.089Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:33:07.118Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:34:27.983Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:34:51.344Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:35:01.867Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:35:16.217Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:35:17.492Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:35:29.600Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:36:34.159Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:36:37.280Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:36:39.547Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:36:43.246Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:36:47.649Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:40:25.766Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:40:44.248Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:41:20.319Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-01T16:41:34.020Z"}

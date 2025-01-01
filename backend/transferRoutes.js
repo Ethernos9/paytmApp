@@ -469,10 +469,135 @@ transferRoutes.post("/transfer/money", authenticateToken, async (req, res) => {
   }
 });
 
-transferRoutes.get("/:id", async (req, res) => {
+transferRoutes.post("/transfer/money/phonenumber", authenticateToken,async (req,res)=>{
+  const {  receiverPhoneNumber, amount, description } = req.body;
+  const senderPhoneNumber = req.phoneNumber
+  if (!senderPhoneNumber || !receiverPhoneNumber || !amount || amount <= 0) {
+    return res.status(400).json({ error: "Invalid input parameters" });
+  }
+
+  // const senderPhoneNumber = req.phoneNumber
+
+
+ 
+  const sender = await prisma.user.findUnique({
+    where: { phoneNumber: senderPhoneNumber },
+    include: { accounts: true },
+  });
+
+    console.log("Sender:", sender)
+
+   const receiver = await prisma.user.findUnique({
+      where: { phoneNumber: receiverPhoneNumber },
+      include: { accounts: true },
+    });
+
+    console.log("Receiver :---> ", receiver)
+    if (!sender) {
+      return res.status(404).json({ error: "Sender not found" });
+    }
+
+    if (!receiver) {
+      return res.status(404).json({ error: "Receiver not found" });
+    }
+    const senderDefaultAccount = sender.accounts.find((acc) => acc.isDefault);
+    const receiverDefaultAccount = receiver.accounts.find((acc) => acc.isDefault);
+
+
+    console.log("senderDefaultAccount:------->", senderDefaultAccount)
+    console.log("receiverDefaultAccount:------->", receiverDefaultAccount)
+
+    if (!senderDefaultAccount) {
+      return res.status(400).json({ error: "Sender does not have a default account" });
+    }
+
+    if (!receiverDefaultAccount) {
+      return res.status(400).json({ error: "Receiver does not have a default account attached with this phone Number" });
+    }
+
+    if (senderDefaultAccount.balance < amount) {
+      return res.status(400).json({ error: "Insufficient balance " });
+    }
+   
+   
+    return res.status(200).json({"msg":"ok"})
+  } 
+
+ 
+)
+
+transferRoutes.get("/transaction/:id", authenticateToken , async (req, res) => {
   // TODO: Implement logic to fetch transaction status by ID
+  const { id } = req.params
+  // Fetch transaction status from your database or any other data source
+
+  try {
+
+    const transaction = await prisma.transaction.findFirst({
+      where: { id: Number(id) },
+      select: { receiverAccountNumber: true, status: true, senderAccountNumber: true, amount: true, description: true, receiverUserId: true , id:true},
+    })
+   
+
+    if (!transaction) {
+      return res.status(404).json({ success: true, message: "Transaction not found make sure that this transaction exist", })
+    }
+    return res.status(200).json({ success: true, message: "Transaction  found", transaction });
+  } catch (error) {
+    return res.status(500).json({ success: false, message: "Something went wrong ", })
+  }
+
+
+
 });
 
-export default transferRoutes;
 
+transferRoutes.post("/transactions",authenticateToken,async (req,res)=>{
+    const userId = req.userId;
+   
+
+    try {
+      const transactions = await prisma.transaction.findMany({
+        where:{
+         OR:[
+         { senderUserId:userId},
+         { receiverUserId:userId },
+         ]
+        }
+      })
+   
+      if (!transactions){
+        return res.status(404).json({ success: true, message: "No transactions found" })
+      }
+      return res.status(200).json({ success: true, message: "Transactions  found", transactions });
+    } catch (error) {
+          return res.status(500).json({ success: false, message: "Something went wrong in fetching transactions ", })
+    }
+})
+
+export default transferRoutes;
+// fetch all the transaction with a particular user
+// TODO : can be done in frontend 
+
+
+// transferRoutes.post("/transactions/particular/:userId", async(req,res)=>{
+//   const userId = req.params.userId;
+//   try {
+//     const transactions = await prisma.transaction.findMany({
+//       where:{
+//         senderUserId: userId,
+//         OR:[
+//           { receiverUserId: userId },
+//         ]
+//       }
+//     })
+//     if (!transactions){
+//       return res.status(404).json({ success: true, message: "No transactions found" })
+
+//     }
+//     return res.status(200).json({ success: true, message: "Transactions  found", transactions });
+//   } catch (error) {
+//       return res.status(500).json({ success: false, message: "Something went wrong in fetching transactions ", })
+//   }
+// })
 
