@@ -512,6 +512,16 @@ async function connectQueue() {
   logger.info("Connecting to RabbitMQ...");
   try {
     connection = await amqp.connect(QUEUE_URL);
+    connection.on("error", (err) => {
+      logger.error(`RabbitMQ connection error: ${err.message}`);
+      setTimeout(connectQueue, 5000); // Retry connection
+    });
+
+    connection.on("close", () => {
+      logger.error("RabbitMQ connection closed. Retrying...");
+      setTimeout(connectQueue, 5000); // Retry connection
+    });
+
     channel = await connection.createChannel();
 
     // Assert queues

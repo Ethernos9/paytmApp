@@ -518,9 +518,89 @@ transferRoutes.post("/transfer/money/phonenumber", authenticateToken,async (req,
     if (senderDefaultAccount.balance < amount) {
       return res.status(400).json({ error: "Insufficient balance " });
     }
-   
-   
-    return res.status(200).json({"msg":"ok"})
+    console.log(sender.id,receiver.id,senderDefaultAccount.accountNumber, receiverDefaultAccount.accountNumber,amount);
+
+
+     // Send payment task to RabbitMQ
+  
+     channel.sendToQueue(
+      QUEUE_NAME,
+      Buffer.from(
+        JSON.stringify({
+          senderUserId:sender.id,
+          receiverUserId:receiver.id,
+          senderAccountNumber:senderDefaultAccount.accountNumber,
+          receiverAccountNumber:receiverDefaultAccount.accountNumber,
+          amount:amount,
+          description: description
+        })
+      ),
+      { persistent: true }
+    );
+    console.log(" payment task sent to RabbitMQ")
+    console.log("Payment task sent to queue:", {
+      senderUserId:sender.id,
+      receiverUserId:receiver.id,
+      senderAccountNumber:senderDefaultAccount.accountNumber,
+      receiverAccountNumber:receiverDefaultAccount.accountNumber,
+      amount,
+      description,
+    });
+
+
+    try {
+      // Declare a unique consumer tag for each payment request
+      const consumerTag = `payment-consumer-${Date.now()}`;
+    
+      // Set up a consumer for the response queue
+      const paymentUpdate = await new Promise((resolve, reject) => {
+        const onMessage = (msg) => {
+          const paymentUpdate = JSON.parse(msg.content.toString());
+          logger.info("Received payment status update:", paymentUpdate);
+    
+          // Acknowledge the message
+          channel.ack(msg);
+    
+          // Cancel the consumer after processing
+          channel.cancel(consumerTag);
+    
+          // Resolve the promise with payment details
+          resolve(paymentUpdate);
+        };
+    
+        // Attach the consumer to the response queue with a unique consumer tag
+        channel.consume(
+          RESPONSE_QUEUE_NAME,
+          onMessage,
+          { noAck: false, consumerTag },
+          (err) => {
+            if (err) {
+              logger.error("Error setting up consumer:", err);
+              reject(new Error("Error setting up response queue consumer"));
+            }
+          }
+        );
+      });
+    
+      // Send the response to the client
+      return res.status(200).json({
+        success: paymentUpdate.success,
+        message: paymentUpdate.message,
+        amount: paymentUpdate.amount,
+        status: paymentUpdate.status,
+        transactionId: paymentUpdate.transactionId,
+      });
+    } catch (error) {
+      logger.error("Error processing payment:", error);
+      return res
+        .status(500)
+        .json({ success: false, message: "Unable to process payment", error: error.message });
+    }
+
+
+
+
+
   } 
 
  
