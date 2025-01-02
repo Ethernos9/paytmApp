@@ -9,11 +9,11 @@ const Login = () => {
                     <h1>Welcome Back </h1>
                     <p>Let's get back to your dashboard</p>
                  </div>
-                <LoginForm/>
+                <LoginForm currentPath = "/login"/>
            </div>
 
-           <div className='border w-full h-screen border-blue-600'>
-                
+           <div className="bg-blue-600 flex items-center justify-center w-full h-screen">
+             <img src="./logoSbi.png" alt="" height={100} width={120} />
            </div>
     </div>
   )
