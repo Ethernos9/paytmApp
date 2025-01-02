@@ -16,7 +16,13 @@ const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(
+  cors({
+    origin: 'http://localhost:5173', // Allow specific origin
+    credentials: true, // Allow credentials (cookies, auth headers, etc.)
+  })
+);
+
 
 // RabbitMQ connection
 connectQueue()
