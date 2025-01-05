@@ -131,4 +131,85 @@ accountRoutes.post("/account/balance",authenticateToken,async(req,res)=>{
     res.status(500).json({sucess:false,message:" Unable to fetch Acount balance",account})
   }
 })
+accountRoutes.post("/getInfo", authenticateToken, async (req, res) => {
+    const { accountNumber } = req.body;
+    const userId = req.userId;
+   
+    try {
+      const account = await prisma.account.findFirst({
+        where: {
+          accountNumber: accountNumber,
+          userId : userId
+        },
+        select: {
+          accountNumber: true,
+          balance: true,
+          senderTransactions: {
+            select: {
+              id: true,
+              receiverAccountNumber: true,
+              amount: true,
+              status: true,
+              description: true,
+              createdAt: true,
+            },
+          },
+          receiverTransactions: {
+            select: {
+              id: true,
+              senderAccountNumber: true,
+              amount: true,
+              status: true,
+              description: true,
+              createdAt: true,
+            },
+          },
+        },
+      });
+  
+      if (!account) {
+        return res
+          .status(404)
+          .json({ success: false, message: "Account not found" });
+      }
+  
+      res.status(200).json({
+        success: true,
+        message: "Account details fetched successfully",
+        account,
+      });
+    } catch (error) {
+      console.error(error);
+      res
+        .status(500)
+        .json({
+          success: false,
+          message: "Unable to fetch account details",
+          error: error.message,
+        });
+    }
+  });
+  
+accountRoutes.get("/get/accounts",authenticateToken,async(req,res)=>{
+    const userId = req.userId;
+    try {
+        const accounts = await prisma.account.findMany({
+            where : {userId }
+        })
+         if (!accounts) return res.status(404).json({
+            success:false, message : "No accounts found for the user" 
+         })
+
+         return res.status(200).json({
+            success:true, message : "Successfully fetched Accounts", accounts 
+         })
+
+    } catch (error) {
+        return res.status(500).json({
+            success:false, message : "Unable to fetch Accounts", error : error 
+         })
+    }
+})
+
+
 export default accountRoutes
