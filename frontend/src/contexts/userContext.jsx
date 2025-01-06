@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { createContext } from "react";
 import useFetchUser from "../hooks/useFetchUser";
 import axios from "axios";
 import useAccounts from "../hooks/useAccounts";
+import useGetAccountDetails from "../hooks/useGetAccountDetails";
 
 
  export const userContext = createContext()
@@ -10,7 +11,11 @@ import useAccounts from "../hooks/useAccounts";
 export const AppProvider =({children})=>{
 
   const {user, setUser, loading,setLoading, error ,setError } = useFetchUser();
+
+  const [defaultAccount,setDefaultAccount] = useState("")
+
   const {accounts,setAccounts} = useAccounts();
+  const [info, setInfo] = useState(null); 
     
     // const [user, setUser] = useState(null);
     // const [loading, setLoading] = useState(true);
@@ -23,6 +28,44 @@ export const AppProvider =({children})=>{
       setIsLoggedIn(true);
       setLoading(false)
       };
+      
+      const setDefAccount = async()=>{
+        try {
+            const response = await axios.post("http://localhost:5000/api/v2/account/set-default",
+             {accountNumber} , {
+              withCredentials: true, // Include credentials (cookies)
+            })
+            console.log("Account set as default successfully:  -------> data", response.data);
+            console.log("Account set as default successfully:  ---------> data.defauktAccount", response.data.defaultAccount);
+        } catch (error) {
+          console.lof(error.message)
+        }
+      }
+
+
+     
+
+const  getAccountInfo = async(accountNumber)=> {
+  try {
+    const response = await axios.post(
+      "http://localhost:5000/api/v2/getinfo",
+      {
+        accountNumber, // Correct parameter passing
+      },
+      {
+        withCredentials: true, // Include credentials (cookies)
+      }
+    );
+    console.log("Response ----------->", response);
+    console.log("Response ----------->", response.data.account);
+    return response.data.account
+    // setInfo(response.data.account); // Update state with fetched data
+  } catch (error) {
+    console.error("Error fetching account details:", error.message);
+  }
+
+ }
+
 
 
 
@@ -74,7 +117,11 @@ export const AppProvider =({children})=>{
     loading,
     error,
     accounts,
-    setAccounts
+    setAccounts,
+    info,
+    getAccountInfo,
+    setDefAccount
+   
      // For error handling in components  //error: {message: "Error fetching user"}  // setError(err.response?.data?.message || "Error fetching user")
    
   };
