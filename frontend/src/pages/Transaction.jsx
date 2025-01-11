@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar";
 
 const Transaction = () => {
   const { transactionId } = useParams();
+  console.log("transactionId from params", transactionId);
   const location = useLocation();
   const transactionData = location.state;
 
@@ -16,15 +17,17 @@ const Transaction = () => {
       </p>
     );
   }
-
+    
   const {
     amount,
     description,
-    receiverName,
+    // receiverName,
     receiverAccountNumber,
     senderAccountNumber,
     status,
+ 
   } = transactionData;
+
 
   const hideAccountNumber = (accountNumber) =>
     `******${accountNumber.slice(-4)}`;
@@ -47,10 +50,10 @@ const Transaction = () => {
           {/* Receiver Details */}
           <div className="flex items-center gap-4 mb-4">
             <div className="bg-purple-600 text-white rounded-full h-10 w-10 flex items-center justify-center font-bold text-lg">
-              {receiverName?.[0]?.toUpperCase()}
+              {/* {receiverName?.[0]?.toUpperCase()} */}
             </div>
             <div>
-              <h2 className="text-lg font-semibold">{receiverName}</h2>
+              {/* <h2 className="text-lg font-semibold">{receiverName}</h2> */}
               <p className="text-gray-600">{hideAccountNumber(receiverAccountNumber)}</p>
             </div>
           </div>
@@ -63,7 +66,7 @@ const Transaction = () => {
 
           {/* Transaction ID */}
           <div className="mb-4">
-            <h2 className="text-sm text-gray-600">Transaction ID</h2>
+            <h2 className="text-sm text-gray-600"> Transaction ID</h2>
             <div className="flex justify-between items-center">
               <p className="text-sm text-gray-800">{transactionId}</p>
               <button

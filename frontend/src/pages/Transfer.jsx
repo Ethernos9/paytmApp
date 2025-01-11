@@ -2,23 +2,31 @@ import React, { useContext, useState } from 'react';
 import NavBar from '../components/NavBar';
 import { userContext } from '../contexts/userContext';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Transfer = () => {
     const { user, loading } = useContext(userContext)
+     const [error, setError] = useState(null);
     const { accounts } = useContext(userContext);
     const [senderAccountNumber, setSenderAccountNumber] = useState(accounts[0]?.accountNumber);
     const [receiverAccountNumber, setReceiverAccountNumber] = useState("");
     const [amount, setAmount] = useState(0);
+    const navigate  = useNavigate()
     const [description, setDescription] = useState("");
     console.log("Accounts from Tarnsfer;::::;;;------>", accounts)
     const OnChange = (e)=>{
       setSenderAccountNumber(e.target.value)
     }
+    // if (!user){
+    //   navigate("/login")
+    // }
     const OnChangeReceiver = (e)=>{
         setReceiverAccountNumber(e.target.value)
     }
     const onChangeAmount = (e)=>{
+
         setAmount(e.target.value)
+
     }
     const onDescChange = (e)=>{
         setDescription(e.target.value)
@@ -30,17 +38,24 @@ const Transfer = () => {
           const response = await axios.post("http://localhost:5000/api/v3/transfer/money",
             {senderAccountNumber,
               receiverAccountNumber,
-              amount,
-              description
+              description,
+             amount: parseFloat(amount)
             },
             {
               withCredentials: true,
             }
           )
-          console.log(" Response from Transfer :", response);
+          if (response.data.success){
+            // navigate("/dashboard")
+            console.log(" Response from Transfer :----------------(@#$%^)---------------> ", response);
+            // window.alert("Transfer Successful")
+            navigate(`/transaction/${response.data.transactionId}`, { state: response.data });
+          }
+          
         } catch (error) {
           console.log(error)
-             console.log(error.message)
+             console.log(error.response.data.message)
+             setError(error.response.data.message)
         }
     }
   return (
@@ -126,9 +141,10 @@ const Transfer = () => {
               className="border px-3 py-2 rounded-lg w-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
             />
           </div>
-         {
-          console.log(amount, description , receiverAccountNumber, senderAccountNumber)
-         }
+                {/* Error Message */}
+            {error && (
+              <div className="text-red-500 text-sm mb-4">{error}</div>
+            )}
           <button
             type="submit"
             className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg shadow-md transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
