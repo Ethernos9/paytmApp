@@ -13,44 +13,121 @@ const accountRoutes = Router();
 // PROTECTED ROUTES --------------------------------
 
 
-accountRoutes.post("/create/account",authenticateToken,async(req,res)=>{
-   const userId = req.userId
-   const {accountType, balance }  = req.body
-   try {
+// accountRoutes.post("/create/account",authenticateToken,async(req,res)=>{
+//    const userId = req.userId
+//    const {accountType, balance,isChecked }  = req.body
+//    try {
+//     const accountNumber = Math.floor(1000000000 + Math.random() * 9000000000).toString();
+//     console.log("Generated Account Number:", accountNumber);
+    
+//     // Check if an account with the given accountNumber already exists
+//     const existedAccount = await prisma.account.findFirst({
+//         where:{
+//             accountNumber,
+//         }
+//     })
+
+
+//     if (existedAccount)  return res.status(400).json({success:false, message:"account already exists"})
+        
+//     const account = await prisma.account.create({
+//         data:{
+//             userId,
+//             accountType,
+//             balance,
+//             isDefault:isChecked,
+//             accountNumber,
+//         },
+//         select:{
+//             accountType:true,
+//             accountNumber:true,
+//             balance:true,
+//             isDefault:true,
+//         }
+        
+//     })
+//     res.status(201).json({success:true,message:"account successfully created",account:account})
+
+
+//    } catch (error) {
+//     res.status(500).json({success:false,message:"Something went wrong, try again after sometime "})
+//    }
+// })
+
+
+accountRoutes.post("/create/account", authenticateToken, async (req, res) => {
+  const userId = req.userId;
+  const { accountType, balance, isChecked } = req.body;
+
+  try {
     const accountNumber = Math.floor(1000000000 + Math.random() * 9000000000).toString();
     console.log("Generated Account Number:", accountNumber);
-    
+
     // Check if an account with the given accountNumber already exists
     const existedAccount = await prisma.account.findFirst({
-        where:{
-            accountNumber,
-        }
-    })
+      where: {
+        accountNumber,
+      },
+    });
 
+    if (existedAccount) {
+      return res.status(400).json({ success: false, message: "Account already exists" });
+    }
 
-    if (existedAccount)  return res.status(400).json({success:false, message:"account already exists"})
-        
-    const account = await prisma.account.create({
-        data:{
-            userId,
-            accountType,
-            balance,
-            accountNumber,
+    // If the new account is marked as default, check if the user already has a default account
+    if (isChecked) {
+      const existingDefaultAccount = await prisma.account.findFirst({
+        where: {
+          userId,
+          isDefault: true,
         },
-        select:{
-            accountType:true,
-            accountNumber:true,
-            balance:true,
-        }
-        
-    })
-    res.status(201).json({success:true,message:"account successfully created",account:account})
+      });
+      console.log("existingDefaultAccount---------------------------------->", existingDefaultAccount)
 
+      if (existingDefaultAccount) {
+        // Update the existing default account to set isDefault to false
+        await prisma.account.update({
+          where: {
+            accountNumber: existingDefaultAccount.accountNumber,
+          },
+          data: {
+            isDefault: false,
+          },
+        });
+      }
+    }
 
-   } catch (error) {
-    res.status(500).json({success:false,message:"Something went wrong, try again after sometime "})
-   }
-})
+    // Create the new account and make it default if isChecked is true
+    const account = await prisma.account.create({
+      data: {
+        userId,
+        accountType,
+        balance,
+        isDefault: isChecked,
+        accountNumber,
+      },
+      select: {
+        accountType: true,
+        accountNumber: true,
+        balance: true,
+        isDefault: true,
+      },
+    });
+
+    res.status(201).json({
+      success: true,
+      message: "Account successfully created",
+      account: account,
+    });
+  } catch (error) {
+    console.error("Error creating account:", error);
+    res.status(500).json({
+      success: false,
+      message: "Something went wrong, try again after sometime",
+    });
+  }
+});
+
 
 accountRoutes.post("/account/set-default",authenticateToken,async(req,res)=>{
     const userId = req.userId
@@ -144,6 +221,7 @@ accountRoutes.post("/getInfo", authenticateToken, async (req, res) => {
         select: {
           accountNumber: true,
           balance: true,
+          createdAt:true,
           senderTransactions: {
             select: {
               id: true,

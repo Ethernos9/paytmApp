@@ -10,16 +10,52 @@ import useGetAccountDetails from "../hooks/useGetAccountDetails";
 
 export const AppProvider =({children})=>{
 
-  const {user, setUser, loading,setLoading, error ,setError } = useFetchUser();
+  // const {user, setUser, loading,setLoading, error ,setError } = useFetchUser();
+
+  const [user,setUser] = useState(null)
+  const [accounts ,setAccounts] = useState([])
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a backend API call to fetch user
+    const fetchUser = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/api/v1/get/user", { withCredentials: true }); // Replace with your API
+        console.log("Fetched user: ", response)
+        const data =  response.data
+        
+        setUser(data.user || null);
+      } catch (error) {
+        console.error('Failed to fetch user:', error);
+        setUser(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchUser();
+  }, []);
+
+  useEffect(() => {
+    const getAccounts = async()=>{
+      try {
+        const response = await axios.get('http://localhost:5000/api/v2/get/accounts',
+          { withCredentials: true })
+        console.log("response form account", response.data.accounts)
+        setAccounts(response.data.accounts)
+      } catch (err) {
+       console.log("error : ", err)
+      }
+    }
+    getAccounts()
+  }, [])
+
 
   const [defaultAccount,setDefaultAccount] = useState("")
 
-  const {accounts,setAccounts} = useAccounts();
+  
   const [info, setInfo] = useState(null); 
     
-    // const [user, setUser] = useState(null);
-    // const [loading, setLoading] = useState(true);
-    // const [error, setError] = useState(null);
     const [isLoggedIn, setIsLoggedIn] = useState
     (false); 
 
@@ -65,6 +101,22 @@ const  getAccountInfo = async(accountNumber)=> {
   }
 
  }
+  const getUser = async()=>{
+    try {
+      
+      const response = await axios.get("http://localhost:5000/api/v1/get/user", { withCredentials: true });
+      if (response.data.success){
+        setUser(response.data.user);
+        setIsLoggedIn(true);
+        setLoading(false);
+      }
+    } catch (error) {
+      setError(error.response?.data?.message || "Error fetching user");
+      setIsLoggedIn(false);
+    }
+    console.log("user :", user, "isLoggedIn :", isLoggedIn,"loading : ",loading )
+    return {user, loading}
+  }
 
 
 
@@ -115,12 +167,12 @@ const  getAccountInfo = async(accountNumber)=> {
     logout,
     setIsLoggedIn,
     loading,
-    error,
     accounts,
     setAccounts,
     info,
     getAccountInfo,
-    setDefAccount
+    setDefAccount,
+    getUser
    
      // For error handling in components  //error: {message: "Error fetching user"}  // setError(err.response?.data?.message || "Error fetching user")
    

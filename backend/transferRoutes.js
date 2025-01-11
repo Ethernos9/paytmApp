@@ -75,8 +75,9 @@ export async function connectQueue() {
 }
 
 transferRoutes.post("/transfer/money", authenticateToken, async (req, res) => {
-  const { senderAccountNumber,  receiverAccountNumber, amount, description } = req.body;
+  const { senderAccountNumber,  receiverAccountNumber, amount , description } = req.body;
   const senderUserId = req.userId;
+
   console.log("senderuserId: ---->", senderUserId)
 
   logger.info("senderUserId:-----> ", senderUserId);
@@ -93,10 +94,13 @@ transferRoutes.post("/transfer/money", authenticateToken, async (req, res) => {
     if (!senderAccount) {
       return res.status(400).json({ success: false, message: "Invalid sender account number" });
     }
-
+    console.log("senderAccountBalance :----------------->", senderAccount.balance)
+    console.log("amount received : ----->", amount)
+    console.log(" type of amount received : ----->", typeof(amount))
     if (senderAccount.balance < amount) {
       return res.status(400).json({ success: false, message: "Insufficient balance" });
     }
+   
 
     // Validate receiver account
     const receiverAccount = await prisma.account.findFirst({
@@ -181,6 +185,7 @@ transferRoutes.post("/transfer/money", authenticateToken, async (req, res) => {
         transactionId: paymentUpdate.transactionId,
         senderAccountNumber:senderAccountNumber,
         receiverAccountNumber: receiverAccountNumber,
+        description: description
       });
     } catch (error) {
       logger.error("Error processing payment:", error);
@@ -202,6 +207,10 @@ transferRoutes.post("/transfer/money", authenticateToken, async (req, res) => {
 transferRoutes.post("/transfer/money/phonenumber", authenticateToken,async (req,res)=>{
   const {  receiverPhoneNumber, amount, description } = req.body;
   const senderPhoneNumber = req.phoneNumber
+  console.log("SenderPhoneNumber: " , senderPhoneNumber)
+  console.log("receiverPhoneNumber: " + receiverPhoneNumber)
+  console.log("amount: " + amount)
+  console.log("description: " + description)
   if (!senderPhoneNumber || !receiverPhoneNumber || !amount || amount <= 0) {
     return res.status(400).json({ error: "Invalid input parameters" });
   }
@@ -317,6 +326,9 @@ transferRoutes.post("/transfer/money/phonenumber", authenticateToken,async (req,
         success: paymentUpdate.success,
         message: paymentUpdate.message,
         amount: paymentUpdate.amount,
+        senderAccountNumber: senderDefaultAccount.accountNumber,
+        receiverAccountNumber: receiverDefaultAccount.accountNumber,
+        description,
         status: paymentUpdate.status,
         transactionId: paymentUpdate.transactionId,
       });
@@ -362,28 +374,32 @@ transferRoutes.get("/transaction/:id", authenticateToken , async (req, res) => {
 });
 
 
-transferRoutes.post("/transactions",authenticateToken,async (req,res)=>{
-    const userId = req.userId;
-   
+transferRoutes.post("/transactions", authenticateToken, async (req, res) => {
+  const userId = req.userId;
 
-    try {
-      const transactions = await prisma.transaction.findMany({
-        where:{
-         OR:[
-         { senderUserId:userId},
-         { receiverUserId:userId },
-         ]
-        }
-      })
-   
-      if (!transactions){
-        return res.status(404).json({ success: true, message: "No transactions found" })
-      }
-      return res.status(200).json({ success: true, message: "Transactions  found", transactions });
-    } catch (error) {
-          return res.status(500).json({ success: false, message: "Something went wrong in fetching transactions ", })
+  try {
+    const transactions = await prisma.transaction.findMany({
+      where: {
+        OR: [
+          { senderUserId: userId },
+          { receiverUserId: userId },
+        ],
+      },
+      orderBy: {
+        createdAt: 'desc', // Sort transactions by the `createdAt` field in descending order
+      },
+    });
+
+    if (!transactions || transactions.length === 0) {
+      return res.status(404).json({ success: false, message: "No transactions found" });
     }
-})
+
+    return res.status(200).json({ success: true, message: "Transactions found", transactions });
+  } catch (error) {
+    return res.status(500).json({ success: false, message: "Something went wrong in fetching transactions" });
+  }
+});
+
 
 export default transferRoutes;
 // fetch all the transaction with a particular user

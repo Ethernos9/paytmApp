@@ -24,7 +24,7 @@ const useGetAccountDetails = () => {
       }
     };
 
-    getInfo("6591699264"); // Pass the account number directly
+    getInfo(accountNumber); // Pass the account number directly
   }, []); // Empty dependency array for one-time fetch
 
   return { info };

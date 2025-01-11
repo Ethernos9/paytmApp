@@ -6,31 +6,36 @@ import { userContext } from '../contexts/userContext';
 import axios from 'axios';
 
 const Dashboard = () => {
-  const { user, loading } = useContext(userContext)
-  const { accounts } = useContext(userContext);
+
+  
+  const {user, accounts ,  getAccountInfo} = useContext(userContext);
   const [info, setInfo] = useState(null)
-  const { getAccountInfo } = useContext(userContext);
+
   const [creditedAmount, setCreditedAmount] = useState(0);
   const [debitedAmount, setDebitedAmount] = useState(0);
   const [combined, setCombined] = useState([]);
-  
+  const navigate = useNavigate();
+
+ 
 
   // const [info, setInfo] = useState(null);
-  const [accountNumber, setAccountNumber] = useState(accounts[0]?.accountNumber);
+  const [accountNumber, setAccountNumber] = useState();
+  useEffect(() => {
+    if (accounts.length > 0) {
+      setAccountNumber(accounts[0]?.accountNumber);
+    }
+  }, [accounts]);
 
-  const navigate = useNavigate()
-  console.log("accounts", accounts)
-  console.log("user", user)
+
 
   useEffect(() => {
     const getInfo = async () => {
       const accountInfo = await getAccountInfo(accountNumber); // Await the async function
       setInfo(accountInfo); // Then update the state
+      console.log("info------------>", accountInfo)
     };
     getInfo();
-
-
-
+  
   }, [accountNumber]); // Add accountNumber as a dependency
 
   useEffect(() => {
@@ -55,19 +60,7 @@ const Dashboard = () => {
     ]);
 
   }, [info])
-
-
-  if (user && !accounts) {
-    navigate("/create/account")
-
-  }
-  if (!user && !loading) {
-    navigate("/");
-  }
-  else if (!user && loading) {
-    // If user is not available and loading is true, display a loader
-    return <div>Loading.............................</div>
-  }
+ 
 
   // useEffect(() => {
   //   const accountDetails = async (accountNumber) => {
@@ -127,17 +120,17 @@ const Dashboard = () => {
   return (
     <div>
 
-      {console.log("Info--------->", info)}
+      {/* {console.log("Info--------->", info)}
       {console.log("credited--------->", creditedAmount)}
       {console.log("debited--------->", debitedAmount)}
-      {console.log("combined--------->", combined)}
+      {console.log("combined--------->", combined)} */}
 
       <NavBar />
       <div className="bg-gradient-to-r from-blue-500 to-purple-500 min-h-screen text-white">
         <main className="px-8 py-6">
           <h1 className="text-4xl font-semibold mb-4">Welcome Back, {`${user?.name}`}👋</h1>
           <p className="mb-8">This is your financial overview report</p>
-          {console.log("accounts---->", accounts)}
+          {/* {console.log("accounts---->", accounts)} */}
           <select value={accountNumber} onChange={onChange} className="mb-4 px-4 py-2 bg-white text-black rounded shadow hover:bg-gray-200 transition duration-300">
             <option>Select Bank Account</option>
             {accounts.map((account, index) => (
@@ -149,21 +142,21 @@ const Dashboard = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             <div className="bg-white text-black p-4 rounded-lg shadow-md transition-transform duration-500 transform hover:scale-105">
               <h2 className="text-xl font-semibold">Balance</h2>
-              <p> {formatDate(info.createdAt)} - {getTodayDate()}</p>
+              <p> {formatDate(info?.createdAt)} - {getTodayDate()}</p>
               <h3 className="text-3xl font-bold mt-2">₹ {info?.balance}</h3>
               <p className="text-red-500">0% from last period</p>
             </div>
 
             <div id="credited-div" className="bg-white text-black p-4 rounded-lg shadow-md transition-transform duration-500 transform hover:scale-105">
               <h2 className="text-xl font-semibold">Credited</h2>
-              <p>{formatDate(info.createdAt)} - {getTodayDate()}</p>
+              <p>{formatDate(info?.createdAt)} - {getTodayDate()}</p>
               <h3 className="text-3xl font-bold mt-2">₹ {creditedAmount}</h3>
               <p className="text-green-500">5% from last period</p>
             </div>
 
             <div id="debited-div" className="bg-white text-black p-4 rounded-lg shadow-md transition-transform duration-500 transform hover:scale-105">
               <h2 className="text-xl font-semibold">Debited</h2>
-              <p>{formatDate(info.createdAt)} - {getTodayDate()}</p>
+              <p>{formatDate(info?.createdAt)} - {getTodayDate()}</p>
               <h3 className="text-3xl font-bold mt-2">₹ {debitedAmount}</h3>
               <p className="text-red-500">1% from last period</p>
             </div>
@@ -175,9 +168,16 @@ const Dashboard = () => {
           <section className="mt-8">
             <h2 className="text-2xl font-semibold mb-4">Recent Transactions</h2>
             <div className="bg-white text-black p-4 rounded-lg shadow-md">
-              {info &&
+
+              {combined.length == 0 ? 
+
+              <div>
+                 <p className='text-lg font-extrabold text-center text-orange-400'>No transactions found for this account</p>
+                </div>
+              :
 
 
+            
                 // [...info.senderTransactions, ...info.receiverTransactions]
 
                   combined.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) // Sort by date (recent first)
@@ -222,7 +222,10 @@ const Dashboard = () => {
                       </div>
 
                     </div>
-                  ))}
+                  ))
+              
+            }
+           
 
             </div>
           </section>
@@ -261,6 +264,54 @@ export default Dashboard;
 
 
 
+
+   
+            {/* {info &&
+                // [...info.senderTransactions, ...info.receiverTransactions]
+
+                  combined.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) // Sort by date (recent first)
+                  .slice(0, 5) // Get the 5 most recent transactions
+                  .map((transaction, index) => (
+                    <div
+                      key={transaction.id || index}
+                      className="grid grid-cols-3 gap-4 border-b pb-2 mb-2 transition-transform duration-300 hover:translate-z-10 hover:scale-105 hover:shadow-lg"
+                    >
+                      <div className="text-sm text-gray-700">
+                        {new Date(transaction.createdAt).toLocaleString("en-IN", {
+                          day: "numeric",
+                          month: "short",
+                          year: "numeric",
+                          hour: "2-digit",
+                          minute: "2-digit",
+                        })}
+                      </div>
+                      <div className="font-medium">₹{transaction.amount}</div>
+                      <div
+                        className={
+                          transaction.senderAccountNumber
+                            ? transaction.senderAccountNumber === accountNumber
+                              ? "text-red-500" // Debited
+                              : "text-green-500" // Credited
+                            : transaction.receiverAccountNumber
+                              ? transaction.receiverAccountNumber === accountNumber
+                                ? "text-green-500" // Credited
+                                : "text-red-500" // Debited
+                              : ""
+                        }
+                      >
+                        {transaction.senderAccountNumber
+                          ? transaction.senderAccountNumber === accountNumber
+                            ? "Debited"
+                            : "Credited"
+                          : transaction.receiverAccountNumber
+                            ? transaction.receiverAccountNumber === accountNumber
+                              ? "Credited"
+                              : "Debited"
+                            : "Transaction details unavailable"}
+                      </div>
+
+                    </div>
+                  ))} */}
 
 
 

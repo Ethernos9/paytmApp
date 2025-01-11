@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const Transfer = () => {
     const { user, loading } = useContext(userContext)
      const [error, setError] = useState(null);
+     const [loader,setLoader] = useState(false)
     const { accounts } = useContext(userContext);
     const [senderAccountNumber, setSenderAccountNumber] = useState(accounts[0]?.accountNumber);
     const [receiverAccountNumber, setReceiverAccountNumber] = useState("");
@@ -33,7 +34,7 @@ const Transfer = () => {
     }
     const handleSubmit = async(e)=>{
         e.preventDefault();
-        console.log("submitted ")
+        setLoader(true)
         try {
           const response = await axios.post("http://localhost:5000/api/v3/transfer/money",
             {senderAccountNumber,
@@ -48,6 +49,7 @@ const Transfer = () => {
           if (response.data.success){
             // navigate("/dashboard")
             console.log(" Response from Transfer :----------------(@#$%^)---------------> ", response);
+            setLoader(false)
             // window.alert("Transfer Successful")
             navigate(`/transaction/${response.data.transactionId}`, { state: response.data });
           }
@@ -149,7 +151,8 @@ const Transfer = () => {
             type="submit"
             className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg shadow-md transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
-            Submit
+            {loader ?  "Processing...." : "Submit"}
+            
           </button>
         </form>
       </div>

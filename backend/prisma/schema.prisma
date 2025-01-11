@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://e9:ethernos9@localhost:5432/payApp"
+  url      = "postgresql://payApp_owner:qQJkFpBX0Is4@ep-muddy-scene-a1q51710.ap-southeast-1.aws.neon.tech/payApp?sslmode=require"
 }
 
 model User {

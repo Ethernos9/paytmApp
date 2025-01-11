@@ -544,3 +544,326 @@
 {"amount":"50","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T17:03:01.533Z","transactionId":34}
 {"amount":"100","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T17:04:12.154Z","transactionId":35}
 {"amount":"100","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-01T17:10:58.983Z","transactionId":36}
+{"level":"error","message":"Failed to connect to RabbitMQ: Socket closed abruptly during opening handshake","stack":"Error: Socket closed abruptly during opening handshake\n    at Socket.endWhileOpening (D:\\PayApp\\backend\\node_modules\\amqplib\\lib\\connection.js:214:19)\n    at Socket.emit (node:events:526:35)\n    at endReadableNT (node:internal/streams/readable:1408:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","timestamp":"2025-01-02T18:41:19.138Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-02T18:42:40.745Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-02T18:42:43.421Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-02T18:44:02.584Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-02T18:49:29.477Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-02T18:49:33.616Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-02T18:49:36.591Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-02T18:49:37.714Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-02T18:49:43.234Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-02T18:49:45.987Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-02T18:49:47.935Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-02T18:49:50.843Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-02T18:50:00.643Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-02T18:51:05.936Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-02T18:54:44.778Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-02T18:54:48.710Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-02T18:55:05.763Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-02T18:55:45.963Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-03T02:21:29.531Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-03T05:30:22.393Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-03T13:10:26.117Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-03T13:12:11.522Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-03T13:12:14.131Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-03T14:59:35.819Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Failed to connect to RabbitMQ:","stack":"AggregateError\n    at internalConnectMultiple (node:net:1114:18)\n    at afterConnectMultiple (node:net:1667:5)","timestamp":"2025-01-04T08:17:55.901Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Failed to connect to RabbitMQ:","stack":"AggregateError\n    at internalConnectMultiple (node:net:1114:18)\n    at afterConnectMultiple (node:net:1667:5)","timestamp":"2025-01-04T08:18:53.972Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Failed to connect to RabbitMQ:","stack":"AggregateError\n    at internalConnectMultiple (node:net:1114:18)\n    at afterConnectMultiple (node:net:1667:5)","timestamp":"2025-01-04T08:19:15.042Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Failed to connect to RabbitMQ:","stack":"AggregateError\n    at internalConnectMultiple (node:net:1114:18)\n    at afterConnectMultiple (node:net:1667:5)","timestamp":"2025-01-04T08:19:55.536Z"}
+{"level":"error","message":"Failed to connect to RabbitMQ: Socket closed abruptly during opening handshake","stack":"Error: Socket closed abruptly during opening handshake\n    at Socket.endWhileOpening (D:\\PayApp\\backend\\node_modules\\amqplib\\lib\\connection.js:214:19)\n    at Socket.emit (node:events:526:35)\n    at endReadableNT (node:internal/streams/readable:1408:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","timestamp":"2025-01-04T08:20:26.528Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-04T08:21:28.115Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Failed to connect to RabbitMQ:","stack":"AggregateError\n    at internalConnectMultiple (node:net:1114:18)\n    at afterConnectMultiple (node:net:1667:5)","timestamp":"2025-01-04T17:50:09.893Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Failed to connect to RabbitMQ:","stack":"AggregateError\n    at internalConnectMultiple (node:net:1114:18)\n    at afterConnectMultiple (node:net:1667:5)","timestamp":"2025-01-04T17:52:46.917Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-04T17:54:26.446Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-04T19:36:00.328Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-04T19:38:21.550Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Failed to connect to RabbitMQ:","stack":"AggregateError\n    at internalConnectMultiple (node:net:1114:18)\n    at afterConnectMultiple (node:net:1667:5)","timestamp":"2025-01-05T09:29:12.832Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Failed to connect to RabbitMQ:","stack":"AggregateError\n    at internalConnectMultiple (node:net:1114:18)\n    at afterConnectMultiple (node:net:1667:5)","timestamp":"2025-01-05T09:29:51.967Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T09:31:32.623Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Failed to connect to RabbitMQ:","stack":"AggregateError\n    at internalConnectMultiple (node:net:1114:18)\n    at afterConnectMultiple (node:net:1667:5)","timestamp":"2025-01-05T16:38:20.838Z"}
+{"level":"error","message":"Failed to connect to RabbitMQ: Socket closed abruptly during opening handshake","stack":"Error: Socket closed abruptly during opening handshake\n    at Socket.endWhileOpening (D:\\PayApp\\backend\\node_modules\\amqplib\\lib\\connection.js:214:19)\n    at Socket.emit (node:events:526:35)\n    at endReadableNT (node:internal/streams/readable:1408:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","timestamp":"2025-01-05T16:39:23.867Z"}
+{"code":"ECONNRESET","errno":-4077,"level":"error","message":"Failed to connect to RabbitMQ: read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:217:20)","syscall":"read","timestamp":"2025-01-05T16:39:33.849Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T16:40:28.314Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T17:34:28.395Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T17:34:39.305Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T17:40:10.187Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T18:55:16.749Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T18:55:19.964Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T18:55:26.850Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T18:55:29.577Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T18:55:30.684Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T18:55:36.453Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T18:56:24.817Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T18:56:37.199Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T18:56:39.388Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T19:03:25.923Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T19:05:47.859Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T19:05:58.231Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T19:06:02.387Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T19:06:03.382Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T19:06:07.229Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T19:06:22.073Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-05T19:06:24.162Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Failed to connect to RabbitMQ:","stack":"AggregateError\n    at internalConnectMultiple (node:net:1114:18)\n    at afterConnectMultiple (node:net:1667:5)","timestamp":"2025-01-06T06:10:00.828Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-06T06:11:58.546Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-06T08:46:17.284Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-06T08:46:38.808Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-06T08:50:50.458Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-06T09:12:22.458Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-06T09:12:41.567Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-06T09:12:43.419Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-06T09:13:45.731Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-06T09:13:45.764Z"}
+{"amount":10,"description":"spotify premium","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2192433414","receiverUserId":3,"senderAccountNumber":"3067505675","senderUserId":3,"timestamp":"2025-01-06T09:13:45.767Z"}
+{"amount":"10","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-06T09:14:04.154Z","transactionId":37}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-06T09:16:34.325Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-06T09:16:34.335Z"}
+{"amount":10,"description":"spotify premium","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2192433414","receiverUserId":3,"senderAccountNumber":"3067505675","senderUserId":3,"timestamp":"2025-01-06T09:16:34.336Z"}
+{"amount":"10","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-06T09:16:34.363Z","transactionId":38}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-06T16:36:22.414Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-06T16:39:46.881Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-06T16:39:46.944Z"}
+{"amount":10,"description":"spotify premium","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"3067505675","receiverUserId":3,"senderAccountNumber":"2192433414","senderUserId":3,"timestamp":"2025-01-06T16:39:46.950Z"}
+{"amount":"10","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-06T16:40:05.738Z","transactionId":71}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-06T16:48:14.302Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-06T16:48:14.352Z"}
+{"amount":10,"description":"spotify premium","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"3067505675","receiverUserId":3,"senderAccountNumber":"2192433414","senderUserId":3,"timestamp":"2025-01-06T16:48:14.354Z"}
+{"amount":"10","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-06T16:48:14.434Z","transactionId":72}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-06T16:48:20.738Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-06T16:48:20.751Z"}
+{"amount":5,"description":"spotify premium","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"3067505675","receiverUserId":3,"senderAccountNumber":"2192433414","senderUserId":3,"timestamp":"2025-01-06T16:48:20.753Z"}
+{"amount":"5","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-06T16:48:20.808Z","transactionId":73}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-06T16:48:29.370Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-06T16:48:29.388Z"}
+{"amount":7,"description":"spotify premium","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"3067505675","receiverUserId":3,"senderAccountNumber":"2192433414","senderUserId":3,"timestamp":"2025-01-06T16:48:29.391Z"}
+{"amount":"7","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-06T16:48:29.445Z","transactionId":74}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-06T16:48:36.144Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-06T16:48:36.159Z"}
+{"amount":9,"description":"spotify premium","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"3067505675","receiverUserId":3,"senderAccountNumber":"2192433414","senderUserId":3,"timestamp":"2025-01-06T16:48:36.163Z"}
+{"amount":"9","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-06T16:48:36.216Z","transactionId":75}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-06T16:52:00.222Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-06T16:52:00.236Z"}
+{"amount":11,"description":"spotify premium","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2192433414","receiverUserId":3,"senderAccountNumber":"3067505675","senderUserId":3,"timestamp":"2025-01-06T16:52:00.238Z"}
+{"amount":"11","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-06T16:52:00.271Z","transactionId":76}
+{"level":"error","message":"RabbitMQ connection error: Unexpected close","timestamp":"2025-01-06T18:42:04.314Z"}
+{"level":"error","message":"RabbitMQ connection closed. Retrying...","timestamp":"2025-01-06T18:42:04.340Z"}
+{"level":"error","message":"Failed to connect to RabbitMQ: Socket closed abruptly during opening handshake","stack":"Error: Socket closed abruptly during opening handshake\n    at Socket.endWhileOpening (D:\\PayApp\\backend\\node_modules\\amqplib\\lib\\connection.js:214:19)\n    at Socket.emit (node:events:526:35)\n    at endReadableNT (node:internal/streams/readable:1408:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","timestamp":"2025-01-07T02:47:54.044Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-07T02:48:35.209Z"}
+{"level":"error","message":"RabbitMQ connection error: Heartbeat timeout","timestamp":"2025-01-07T04:27:14.836Z"}
+{"level":"error","message":"RabbitMQ connection closed. Retrying...","timestamp":"2025-01-07T04:27:14.993Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-07T04:27:20.190Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-07T04:27:20.197Z"}
+{"level":"error","message":"Failed to connect to RabbitMQ: Socket closed abruptly during opening handshake","stack":"Error: Socket closed abruptly during opening handshake\n    at Socket.endWhileOpening (D:\\PayApp\\backend\\node_modules\\amqplib\\lib\\connection.js:214:19)\n    at Socket.emit (node:events:526:35)\n    at endReadableNT (node:internal/streams/readable:1408:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","timestamp":"2025-01-08T16:44:23.111Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-08T16:44:50.899Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-08T17:13:10.261Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-08T17:13:10.339Z"}
+{"amount":"51","description":"have fun","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"4878563449","receiverUserId":5,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-08T17:13:10.344Z"}
+{"amount":"51","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-08T17:13:10.538Z","transactionId":77}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-08T17:16:45.389Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-08T17:16:45.411Z"}
+{"amount":"51","description":"have fun","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"4878563449","receiverUserId":5,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-08T17:16:45.413Z"}
+{"amount":"51","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-08T17:17:24.929Z","transactionId":78}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-08T17:21:40.476Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-08T17:21:42.977Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-08T17:21:47.296Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-08T17:21:49.168Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-08T17:21:52.120Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-08T17:21:56.279Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-08T18:14:26.665Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-08T18:14:26.746Z"}
+{"amount":"49","description":"top up ","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"3067505675","receiverUserId":3,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-08T18:14:26.753Z"}
+{"amount":"49","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-08T18:14:26.907Z","transactionId":79}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-08T18:16:58.586Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-08T18:16:58.608Z"}
+{"amount":"600","description":"food","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"3067505675","receiverUserId":3,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-08T18:16:58.611Z"}
+{"amount":"600","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-08T18:16:58.667Z","transactionId":80}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-08T18:24:29.467Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-08T18:24:29.552Z"}
+{"amount":"10","description":"toffee","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"6591699264","receiverUserId":3,"senderAccountNumber":"2192433414","senderUserId":3,"timestamp":"2025-01-08T18:24:29.556Z"}
+{"amount":"10","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-08T18:24:29.643Z","transactionId":81}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-08T18:25:41.633Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-08T18:25:41.661Z"}
+{"amount":"11","description":"","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"3067505675","receiverUserId":3,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-08T18:25:41.663Z"}
+{"amount":"11","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-08T18:25:41.721Z","transactionId":82}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-08T18:38:37.503Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-08T18:39:03.462Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-08T18:39:03.481Z"}
+{"amount":"7","description":"have tea","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"6591699264","receiverUserId":3,"senderAccountNumber":"2192433414","senderUserId":3,"timestamp":"2025-01-08T18:39:03.484Z"}
+{"amount":"7","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-08T18:39:03.578Z","transactionId":83}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-08T18:44:50.128Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-08T18:44:50.185Z"}
+{"amount":"7","description":"have tea","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"6591699264","receiverUserId":3,"senderAccountNumber":"2192433414","senderUserId":3,"timestamp":"2025-01-08T18:44:50.187Z"}
+{"amount":"7","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-08T18:44:50.278Z","transactionId":84}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-08T18:47:12.088Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-08T18:47:20.189Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-08T18:47:37.253Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-08T18:47:37.366Z"}
+{"amount":"7","description":"have tea","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"6591699264","receiverUserId":3,"senderAccountNumber":"3067505675","senderUserId":3,"timestamp":"2025-01-08T18:47:37.368Z"}
+{"amount":"7","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-08T18:47:37.419Z","transactionId":85}
+{"level":"error","message":"Failed to connect to RabbitMQ: Socket closed abruptly during opening handshake","stack":"Error: Socket closed abruptly during opening handshake\n    at Socket.endWhileOpening (D:\\PayApp\\backend\\node_modules\\amqplib\\lib\\connection.js:214:19)\n    at Socket.emit (node:events:526:35)\n    at endReadableNT (node:internal/streams/readable:1408:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","timestamp":"2025-01-09T05:38:46.612Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-09T05:39:58.411Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-09T05:41:20.314Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-09T05:43:40.594Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-09T05:44:26.943Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-09T05:44:42.841Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-09T05:44:42.876Z"}
+{"amount":"7","description":"have tea","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"6591699264","receiverUserId":3,"senderAccountNumber":"2192433414","senderUserId":3,"timestamp":"2025-01-09T05:44:42.878Z"}
+{"amount":"7","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-09T05:44:42.980Z","transactionId":86}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-09T05:45:04.957Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-09T05:45:13.074Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-09T05:45:15.585Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-09T05:45:40.814Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-09T05:49:00.316Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-09T05:49:10.471Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-09T05:49:10.510Z"}
+{"amount":"10","description":"have bread","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"6591699264","receiverUserId":3,"senderAccountNumber":"2192433414","senderUserId":3,"timestamp":"2025-01-09T05:49:10.512Z"}
+{"amount":"10","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-09T05:49:10.561Z","transactionId":87}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-09T05:49:21.372Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-09T05:49:21.383Z"}
+{"amount":"10","description":"have bread","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"6591699264","receiverUserId":3,"senderAccountNumber":"2192433414","senderUserId":3,"timestamp":"2025-01-09T05:49:21.386Z"}
+{"amount":"10","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-09T05:49:21.430Z","transactionId":88}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-09T05:50:00.874Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-09T05:50:00.884Z"}
+{"amount":"1000","description":"gym","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"2192433414","receiverUserId":3,"senderAccountNumber":"6591699264","senderUserId":3,"timestamp":"2025-01-09T05:50:00.886Z"}
+{"amount":"1000","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-09T05:50:00.930Z","transactionId":89}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-09T05:51:07.149Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-09T05:51:09.414Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-09T05:51:46.793Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-09T05:52:13.145Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-09T05:52:18.173Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-09T05:52:19.500Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-09T05:52:23.728Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-09T05:53:03.856Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-09T05:53:03.885Z"}
+{"amount":null,"description":"top up","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"3067505675","receiverUserId":3,"senderAccountNumber":"2192433414","senderUserId":3,"timestamp":"2025-01-09T05:53:03.887Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-09T05:53:37.032Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-09T05:53:37.043Z"}
+{"amount":null,"description":"top up","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"3067505675","receiverUserId":3,"senderAccountNumber":"2192433414","senderUserId":3,"timestamp":"2025-01-09T05:53:37.044Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-09T05:53:56.650Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-09T05:53:56.665Z"}
+{"amount":null,"description":"top up","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"3067505675","receiverUserId":3,"senderAccountNumber":"2192433414","senderUserId":3,"timestamp":"2025-01-09T05:53:56.666Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-09T05:54:30.631Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-09T05:54:35.906Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-09T05:54:41.460Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-09T06:02:09.067Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-09T07:30:37.139Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-09T07:32:09.646Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-09T07:32:09.746Z"}
+{"amount":39,"description":"top up","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"6591699264","receiverUserId":3,"senderAccountNumber":"2192433414","senderUserId":3,"timestamp":"2025-01-09T07:32:09.753Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-09T07:35:35.130Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-09T07:35:35.160Z"}
+{"amount":39,"description":"top up","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"6591699264","receiverUserId":3,"senderAccountNumber":"2192433414","senderUserId":3,"timestamp":"2025-01-09T07:35:35.162Z"}
+{"amount":"39","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-09T07:35:35.311Z","transactionId":90}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-09T07:39:54.292Z"}
+{"level":"error","message":"Failed to connect to RabbitMQ: Socket closed abruptly during opening handshake","stack":"Error: Socket closed abruptly during opening handshake\n    at Socket.endWhileOpening (D:\\PayApp\\backend\\node_modules\\amqplib\\lib\\connection.js:214:19)\n    at Socket.emit (node:events:526:35)\n    at endReadableNT (node:internal/streams/readable:1408:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","timestamp":"2025-01-10T16:15:01.216Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-10T16:15:34.450Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-10T16:39:54.794Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-10T16:40:35.295Z"}
+{"amount":"100","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-10T18:23:28.733Z","transactionId":91}
+{"amount":"100","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-10T18:23:41.100Z","transactionId":92}
+{"amount":"100","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-10T18:26:17.218Z","transactionId":93}
+{"amount":"100","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-10T18:27:16.924Z","transactionId":94}
+{"amount":"500","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-10T18:31:57.253Z","transactionId":95}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-10T18:33:22.402Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-10T18:35:01.735Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-10T18:35:16.305Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-10T18:35:19.439Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-10T18:35:22.268Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-10T18:35:29.821Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-10T18:35:35.161Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-10T18:35:50.357Z"}
+{"amount":"500","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-10T18:36:17.529Z","transactionId":96}
+{"amount":"500","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-10T18:36:42.436Z","transactionId":97}
+{"amount":"1","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-10T18:39:19.338Z","transactionId":98}
+{"code":"ECONNREFUSED","level":"error","message":"Failed to connect to RabbitMQ:","stack":"AggregateError\n    at internalConnectMultiple (node:net:1114:18)\n    at afterConnectMultiple (node:net:1667:5)","timestamp":"2025-01-11T05:38:12.782Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Failed to connect to RabbitMQ:","stack":"AggregateError\n    at internalConnectMultiple (node:net:1114:18)\n    at afterConnectMultiple (node:net:1667:5)","timestamp":"2025-01-11T05:38:25.096Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Failed to connect to RabbitMQ:","stack":"AggregateError\n    at internalConnectMultiple (node:net:1114:18)\n    at afterConnectMultiple (node:net:1667:5)","timestamp":"2025-01-11T06:07:42.829Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T06:09:04.651Z"}
+{"amount":"11","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-11T06:16:02.597Z","transactionId":99}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-11T06:48:33.028Z"}
+{"amount":"300","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-11T06:49:39.341Z","transactionId":100}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T09:43:50.090Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T09:43:53.914Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T09:44:32.187Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T09:44:37.217Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T09:46:46.887Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T09:46:49.890Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T09:46:51.398Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T09:46:52.727Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T09:50:12.337Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T09:51:09.415Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T09:59:17.201Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T09:59:18.512Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T09:59:20.430Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:02:00.861Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:02:04.275Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:14:58.742Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:15:41.723Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:16:35.384Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:16:36.528Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:16:38.106Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:16:46.713Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:16:56.665Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:16:59.292Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:18:30.583Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:18:47.475Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:18:49.535Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:18:52.403Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:18:56.192Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:18:57.161Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:19:02.373Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:25:25.452Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-11T10:25:30.199Z"}
+{"level":"error","message":"Error processing payment: prisma.account.fin is not a function","stack":"TypeError: prisma.account.fin is not a function\n    at file:///D:/PayApp/backend/transferRoutes.js:87:48\n    at Layer.handle [as handle_request] (D:\\PayApp\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\PayApp\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at authenticateToken (file:///D:/PayApp/backend/middleware.js:24:5)\n    at Layer.handle [as handle_request] (D:\\PayApp\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\PayApp\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (D:\\PayApp\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (D:\\PayApp\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\PayApp\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (D:\\PayApp\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)","timestamp":"2025-01-11T10:25:30.201Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-11T10:25:52.790Z"}
+{"level":"error","message":"Error processing payment: prisma.account.fin is not a function","stack":"TypeError: prisma.account.fin is not a function\n    at file:///D:/PayApp/backend/transferRoutes.js:87:48\n    at Layer.handle [as handle_request] (D:\\PayApp\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\PayApp\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at authenticateToken (file:///D:/PayApp/backend/middleware.js:24:5)\n    at Layer.handle [as handle_request] (D:\\PayApp\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\PayApp\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (D:\\PayApp\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (D:\\PayApp\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\PayApp\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (D:\\PayApp\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)","timestamp":"2025-01-11T10:25:52.792Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:26:18.249Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:26:20.398Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-11T10:26:22.009Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-11T10:26:29.254Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-11T10:27:05.750Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-11T10:27:08.166Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-11T10:27:08.982Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:29:04.484Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:30:05.086Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:49:37.880Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:55:20.557Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T10:59:05.995Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-11T11:07:46.144Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-11T11:07:48.293Z"}
+{"amount":11,"description":"top up","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"8859343635","receiverUserId":1,"senderAccountNumber":"6163518723","senderUserId":1,"timestamp":"2025-01-11T11:07:48.298Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T11:10:53.078Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T11:24:52.489Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T11:34:15.068Z"}
+{"level":"info","message":"senderUserId:-----> ","timestamp":"2025-01-11T11:36:46.356Z"}
+{"level":"info","message":"receiverAccount:----->","timestamp":"2025-01-11T11:36:48.236Z"}
+{"amount":100,"description":"Fun","level":"info","message":"Payment task sent to queue:","receiverAccountNumber":"1395527800","receiverUserId":1,"senderAccountNumber":"3397712924","senderUserId":1,"timestamp":"2025-01-11T11:36:48.240Z"}
+{"amount":"11","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-11T11:36:48.253Z","transactionId":1}
+{"amount":"11","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-11T11:36:48.255Z","transactionId":2}
+{"amount":"11","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-11T11:36:48.258Z","transactionId":3}
+{"amount":"11","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-11T11:36:48.259Z","transactionId":4}
+{"amount":"100","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-11T11:41:42.842Z","transactionId":1}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T11:46:17.799Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T11:46:19.905Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T11:46:22.082Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T11:46:25.064Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T11:46:26.570Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T11:46:28.477Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T11:46:34.448Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T11:46:40.549Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T11:46:48.272Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T11:46:52.778Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T11:46:54.574Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T11:46:59.953Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T11:47:01.321Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T11:47:04.037Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T11:47:08.978Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T11:47:14.132Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T11:47:16.521Z"}
+{"level":"error","message":"Failed to connect to RabbitMQ: Socket closed abruptly during opening handshake","stack":"Error: Socket closed abruptly during opening handshake\n    at Socket.endWhileOpening (D:\\PayApp\\backend\\node_modules\\amqplib\\lib\\connection.js:214:19)\n    at Socket.emit (node:events:526:35)\n    at endReadableNT (node:internal/streams/readable:1408:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","timestamp":"2025-01-11T16:38:00.984Z"}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T16:38:26.810Z"}
+{"amount":"1100","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-11T16:44:12.710Z","transactionId":2}
+{"amount":"300","level":"info","message":"Received payment status update: transaction successfull","status":"SUCCESS","success":true,"timestamp":"2025-01-11T16:44:48.146Z","transactionId":3}
+{"level":"info","message":"Connected to RabbitMQ","timestamp":"2025-01-11T16:52:58.650Z"}

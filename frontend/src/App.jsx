@@ -14,6 +14,11 @@ import CreateAccount from './pages/CreateAccount'
 import GetUser from './pages/GetUser'
 import Dashboard from './pages/Dashboard'
 import GetInfo from './pages/GetInfo'
+import Transfer from './pages/Transfer'
+import Transaction from './pages/Transaction'
+import ShowTransaction from './pages/ShowTransaction'
+import MobileTransfer from './pages/MobileTransfer'
+import ProtectedRoute from './ProtectedRoute'
 
 function App() {
 
@@ -23,12 +28,31 @@ function App() {
     <Router>
         <Routes>
            <Route path='/' element = {<HomePage/>}/>
+           <Route path='/protected' element = {<ProtectedRoute/>}/>
            <Route path='/login' element = {<Login/>}/>
            <Route path='/signup' element = {<Signup/>}/>
-           <Route path='/create/account' element = {<CreateAccount/>}/>
+           <Route path='/create/account' element = {
+            <ProtectedRoute>
+            <CreateAccount/>
+          </ProtectedRoute>
+           }/>
            <Route path='/get/user' element = {<GetUser/>}/>
-           <Route path='/dashboard' element = {<Dashboard/>}/>
+           <Route path='/dashboard' element = {<ProtectedRoute>
+             <Dashboard/>
+           </ProtectedRoute>}/>
            <Route path='/getInfo' element = {<GetInfo/>}/>
+           <Route path='/transfer' element = {<ProtectedRoute>
+             <Transfer/>
+           </ProtectedRoute>}/>
+           <Route path='/show-transactions' element = {<ProtectedRoute>
+             <ShowTransaction/>
+           </ProtectedRoute>}/>
+           <Route path='/transaction/:transactionId' element = {<ProtectedRoute>
+             <Transaction/>
+           </ProtectedRoute>}/>
+           <Route path='/mobile-transfer' element = {<ProtectedRoute>
+             <MobileTransfer/>
+           </ProtectedRoute>}/>
 
         </Routes>
     </Router>

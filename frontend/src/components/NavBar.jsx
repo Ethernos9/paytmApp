@@ -5,7 +5,7 @@ import { userContext } from "../contexts/userContext";
 import { useRef } from "react";
 import { useEffect } from "react";
 
-const NavBar = () => {
+const NavBar = ({}) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProfileDialogOpen, setIsProfileDialogOpen] = useState(false);
   const { user, logout } = useContext(userContext);
@@ -44,12 +44,15 @@ const NavBar = () => {
         <Link to="/dashboard" className="hover:text-yellow-300 transition-colors">
           Dashboard
         </Link>
-        <a href="#self-transfer" className="hover:text-yellow-300 transition-colors">
-          Contacts
-        </a>
-        <a href="#transactions" className="hover:text-yellow-300 transition-colors">
-          FAQs
-        </a>
+        <Link to="/transfer" className="hover:text-yellow-300 transition-colors">
+        Transfer
+        </Link>
+        <Link to="/mobile-transfer" className="hover:text-yellow-300 transition-colors">
+         PhonePay
+        </Link>
+        <Link to= "/show-transactions" className="hover:text-yellow-300 transition-colors">
+          Transactions
+        </Link>
       </div>
 
       {/* Profile and Login */}
